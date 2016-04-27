@@ -1,0 +1,34 @@
+sendInterval: 250
+
+redis:
+  servers: localhost:6379:0:1
+  staticServer: localhost:6379:0:1
+  password: luna1234
+
+#redis:
+#  servers: ardb0.etermax.net:6300:0:1,ardb1.etermax.net:6301:1:1,ardb2.etermax.net:6302:2:1,ardb3.etermax.net:6303:3:1,ardb4.etermax.net:6304:4:1,ardb5.etermax.net:6305:5:1,ardb6.etermax.net:6306:6:1,ardb7.etermax.net:6307:7:1,ardb8.etermax.net:6308:8:1,ardb9.etermax.net:6309:9:1,ardb10.etermax.net:6310:10:1,ardb11.etermax.net:6311:11:1,ardb12.etermax.net:6312:12:1,ardb13.etermax.net:6313:13:1,ardb14.etermax.net:6314:14:1,ardb15.etermax.net:6315:15:1
+#  staticServer: ardb-static.etermax.net:5300
+#  password: NTZmODA3MDdlMzgzYTM3ZTgzZDI5OGVm
+
+redis-stats:
+  servers: localhost:6379:0:1
+  staticServer: localhost:6379:0:1
+  password: luna1234
+
+logging:
+  level: INFO
+
+  loggers:
+      "com.etermax.jvon.deserializers.ObjectDeserializer": ERROR
+      "org.eclipse.jetty.util.log": ERROR
+      "org.reflections.Reflections": ERROR
+      "com.etermax.notifications.senders.BBSender": OFF
+      "com.etermax.properties": OFF
+      "com.etermax.users": ERROR
+      "com.etermax.common.security": ERROR
+
+  appenders:
+    - type: console
+      threshold: ALL
+      timeZone: UTC
+      target: stdout
